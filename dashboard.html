@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard - Toko Buku Online</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+<header class="bar"><strong>Toko Buku Online</strong><nav><a href="dashboard.html">Dashboard</a><a href="stok.html">Stok</a><a href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><a href="#" onclick="logout();return false">Keluar</a></nav></header>
+<main>
+  <h1 id="greeting"></h1>
+  <p>Pilih menu yang ingin Anda buka.</p>
+  <div class="grid2 menu">
+    <a href="stok.html">Informasi Stok / Katalog<small>Lihat dan tambah stok buku</small></a>
+    <a href="tracking.html">Tracking Pengiriman<small>Lacak dengan nomor DO</small></a>
+    <a href="checkout.html#pesanan">Laporan Pemesanan<small>Pesanan yang sedang disusun</small></a>
+    <a href="checkout.html#history">History Transaksi<small>Pesanan yang sudah dibuat</small></a>
+  </div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

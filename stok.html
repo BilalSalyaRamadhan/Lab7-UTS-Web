@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stok - Toko Buku Online</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stok">
+<header class="bar"><strong>Toko Buku Online</strong><nav><a href="dashboard.html">Dashboard</a><a href="stok.html">Stok</a><a href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><a href="#" onclick="logout();return false">Keluar</a></nav></header>
+<main>
+  <div class="card">
+    <h1>Katalog dan stok buku</h1>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Kode</th><th>Judul</th><th>Kategori</th><th>Harga</th><th>Stok</th><th></th></tr></thead>
+        <tbody id="tbodyStok"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Tambah stok baru</h2>
+    <form id="formStok" class="grid2">
+      <div><label for="k">Kode</label><input id="k" name="kode" required></div>
+      <div><label for="j">Judul</label><input id="j" name="judul" required></div>
+      <div><label for="kt">Kategori</label><input id="kt" name="kategori" required></div>
+      <div><label for="h">Harga (Rp)</label><input id="h" name="harga" type="number" min="0" required></div>
+      <div><label for="s">Stok</label><input id="s" name="stok" type="number" min="0" required></div>
+    </form>
+    <div class="row"><button class="btn" type="submit" form="formStok">Tambah baris</button></div>
+  </div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

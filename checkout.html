@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pemesanan - Toko Buku Online</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+<header class="bar"><strong>Toko Buku Online</strong><nav><a href="dashboard.html">Dashboard</a><a href="stok.html">Stok</a><a href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><a href="#" onclick="logout();return false">Keluar</a></nav></header>
+<main>
+  <div class="card" id="pesanan">
+    <h1>Pemesanan</h1>
+    <label for="pilihBuku">Tambah buku</label>
+    <div class="row" style="margin-top:0">
+      <select id="pilihBuku" style="flex:1"></select>
+      <button type="button" class="btn gold" id="btnTambah">Tambah</button>
+    </div>
+    <div class="tablewrap" style="margin-top:16px">
+      <table>
+        <thead><tr><th>Judul</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th><th></th></tr></thead>
+        <tbody id="tbodyKeranjang"></tbody>
+      </table>
+    </div>
+    <div class="total" id="totalBayar"></div>
+  </div>
+
+  <div class="card">
+    <h2>Data pemesan dan pembayaran</h2>
+    <form id="formPesan" class="grid2">
+      <div><label for="namaPemesan">Nama pemesan</label><input id="namaPemesan" name="nama" required></div>
+      <div><label for="alamat">Alamat pengiriman</label><input id="alamat" name="alamat" required></div>
+      <div><label for="ekspedisi">Ekspedisi</label>
+        <select id="ekspedisi" name="ekspedisi"><option>JNE</option><option>J&amp;T</option><option>SiCepat</option></select></div>
+      <div><label for="paket">Jenis paket</label>
+        <select id="paket" name="paket"><option>Reguler</option><option>Express</option></select></div>
+      <div><label for="bayar">Metode pembayaran</label>
+        <select id="bayar" name="pembayaran"><option>Transfer Bank</option><option>E-Wallet</option><option>COD</option></select></div>
+    </form>
+    <div class="row"><button class="btn" type="submit" form="formPesan">Buat pesanan</button></div>
+  </div>
+
+  <div class="card" id="history">
+    <h2>History transaksi</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>No. DO</th><th>Tanggal</th><th>Item</th><th>Pembayaran</th><th>Total</th></tr></thead>
+        <tbody id="tbodyHistory"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login - Toko Buku Online</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+<div class="login"><div class="card">
+  <h1>Masuk ke toko buku</h1>
+  <form id="formLogin">
+    <label for="email">Email</label><input id="email" name="email" type="email" required>
+    <label for="pw">Password</label><input id="pw" name="password" type="password" required>
+    <div class="row"><button class="btn" type="submit">Login</button></div>
+  </form>
+  <div class="links">
+    <button class="link" onclick="bukaModal('modalLupa')">Lupa Password</button>
+    <button class="link" onclick="bukaModal('modalDaftar')">Daftar</button>
+  </div>
+  <p><small>Akun uji: budi@mail.com / 123456</small></p>
+</div></div>
+
+<div class="modal" id="modalLupa"><div class="box">
+  <h2>Lupa password</h2>
+  <form id="formLupa">
+    <label for="le">Email terdaftar</label><input id="le" name="email" type="email" required>
+    <div class="row">
+      <button class="btn" type="submit">Kirim tautan reset</button>
+      <button type="button" class="btn ghost" onclick="tutupModal('modalLupa')">Batal</button>
+    </div>
+  </form>
+</div></div>
+
+<div class="modal" id="modalDaftar"><div class="box">
+  <h2>Daftar akun</h2>
+  <form id="formDaftar">
+    <label for="dn">Nama</label><input id="dn" name="nama" required>
+    <label for="de">Email</label><input id="de" name="email" type="email" required>
+    <label for="dp">Password</label><input id="dp" name="password" type="password" minlength="6" required>
+    <div class="row">
+      <button class="btn" type="submit">Daftar</button>
+      <button type="button" class="btn ghost" onclick="tutupModal('modalDaftar')">Batal</button>
+    </div>
+  </form>
+</div></div>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
